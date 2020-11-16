@@ -25,6 +25,12 @@ namespace Register
         {
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddAuthentication().AddFacebook(option =>
+            {
+            option.AppId = "978644702662037";
+            option.AppSecret = "b524647f841184824e6279e414b88e30";
+            
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
